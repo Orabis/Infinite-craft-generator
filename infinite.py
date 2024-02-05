@@ -8,6 +8,8 @@ unique_texts = set()
 elements = []
 
 soup = make_first_requests()
+print("making first GET, sleeping 1 second..")
+time.sleep(1)
 for element in soup.find_all("div", class_="item"):
     text_without_emojis = re.sub(r'^[^\w\s]+', '', element.get_text(strip=True))
     unique_texts.add(text_without_emojis)
