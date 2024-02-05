@@ -18,7 +18,8 @@ def make_requests_fusion(value1, value2):
               headers=headers)
     json_obj = json.loads(r.content)
     result_value = json_obj["result"]
-    print(result_value)
+    return result_value
+
 
 def make_first_requests():
     s = requests.Session()
