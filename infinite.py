@@ -1,4 +1,5 @@
 import re
+from itertools import product
 
 from function import make_first_requests, make_requests_fusion
 
@@ -13,8 +14,12 @@ for element in soup.find_all("div", class_="item"):
 
 elements = list(unique_texts)
 
-for i in range(len(elements)):
-    for j in range(i + 1, len(elements)):
-        element1 = elements[i]
-        element2 = elements[j]
-        make_requests_fusion(element1, element2)
+combinations = product(elements, repeat=len(elements))
+
+for combination in combinations:
+    result = combination[0]
+    for i in range(1, len(combination)):
+        result = make_requests_fusion(result, combination[i])
+    print(f"Combination: {combination}, Result: {result}")
+    unique_texts.add(result)
+print(unique_texts)

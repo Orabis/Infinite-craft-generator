@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import json
 
 with open('headers.txt', 'r') as file:
     headers_lines = file.readlines()
@@ -15,8 +16,9 @@ def make_requests_fusion(value1, value2):
     s = requests.Session()
     r = s.get(f"https://neal.fun/api/infinite-craft/pair?first={value1}&second={value2}",
               headers=headers)
-    print(r.content)
-
+    json_obj = json.loads(r.content)
+    result_value = json_obj["result"]
+    print(result_value)
 
 def make_first_requests():
     s = requests.Session()
