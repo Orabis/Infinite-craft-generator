@@ -2,8 +2,6 @@ import re
 from itertools import product
 import time
 
-import requests.utils
-
 from function import make_first_requests, make_requests_fusion
 
 
