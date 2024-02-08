@@ -30,13 +30,16 @@ Sec-Fetch-Site: same-origin
 If-Modified-Since: 04/12/1400
 TE: trailers
 ```
+
+## How to retrieve Data 
+For retrieving the data-storage of all the crafts, copy the content of `data-storage.json` and remplace it in the `local Storage` of the infinite-craft website. (I use Local Storage Editor) 
 ## To Do
 
 List any tasks or features that need to be completed or added to the project.
 
-- [ ] Add a random pattern
+- [x] Add a random pattern
 - [ ] Implement caching to resume from where it left off
-- [ ] Enable exporting of completed crafts to be used on the website
+- [x] Enable exporting of completed crafts to be used on the website
 - [ ] Refactor code (currently ugly)
 
 ## Contact
