@@ -21,7 +21,8 @@ def make_requests_fusion(value1, value2):
     json_obj = json.loads(r.content)
     result_value = json_obj["result"]
     is_new = json_obj["isNew"]
-    return result_value, is_new
+    json_emoji = json_obj["emoji"]
+    return result_value, is_new, json_emoji
 
 
 def make_first_requests():
