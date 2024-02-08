@@ -38,9 +38,9 @@ For retrieving the data-storage of all the crafts, copy the content of `data-sto
 List any tasks or features that need to be completed or added to the project.
 
 - [x] Add a random pattern
-- [ ] Implement caching to resume from where it left off
+- [x] Implement caching to resume from where it left off
 - [x] Enable exporting of completed crafts to be used on the website
-- [ ] Refactor code (currently ugly)
+- [] Refactor code (Already done function)
 
 ## Contact
 
